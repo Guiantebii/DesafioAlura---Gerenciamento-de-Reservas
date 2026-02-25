@@ -13,6 +13,8 @@ public class Sala {
     private Integer capacidade;
     private boolean ativa;
 
+    public Sala() {}
+
     public boolean isAtiva() {
         return ativa;
     }

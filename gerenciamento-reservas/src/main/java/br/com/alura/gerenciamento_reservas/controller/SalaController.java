@@ -35,13 +35,13 @@ public class SalaController {
         return ResponseEntity.ok(salas);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<SalaDto> atualizarSala(@PathVariable  Long id,@RequestBody AtualizarSalaDto dto) {
         SalaDto sala = salaService.atualizarSala(id,dto);
         return ResponseEntity.ok(sala);
     }
 
-    @PatchMapping("{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<Void> desativarSala(@PathVariable  Long id) {
         salaService.desativarSala(id);
         return ResponseEntity.noContent().build();

@@ -1,4 +1,7 @@
 package br.com.alura.gerenciamento_reservas.dto;
 
-public record CadastrarUsuarioDto() {
+public record CadastrarUsuarioDto(
+        String nome,
+        String email
+) {
 }
