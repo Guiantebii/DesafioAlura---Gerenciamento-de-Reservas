@@ -11,6 +11,8 @@ public class Usuario {
     private String nome;
     private String email;
 
+    public Usuario() {
+    }
     public String getEmail() {
         return email;
     }

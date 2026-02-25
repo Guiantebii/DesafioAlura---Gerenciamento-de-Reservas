@@ -112,7 +112,7 @@ public class ReservaService {
 
     public void cancelarReserva(Long id) {
         //Buscar Reserva
-        Reserva reserva = reservaRepository.findById(id).orElseThrow(() -> new RuntimeException("Reserva não encontrada"));
+        Reserva reserva = reservaRepository.findById(id).orElseThrow(() -> new ValidacaoException("Reserva não encontrada"));
 
         if(reserva.getStatus() == (StatusReserva.CANCELADA)){
             throw new ValidacaoException("Reserva já esta cancelada");
