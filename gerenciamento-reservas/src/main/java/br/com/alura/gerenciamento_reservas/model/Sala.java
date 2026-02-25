@@ -1,19 +1,23 @@
 package br.com.alura.gerenciamento_reservas.model;
 
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "salas")
 public class Sala {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private int capacidade;
+    private Integer capacidade;
     private boolean ativa;
-
-
 
     public boolean isAtiva() {
         return ativa;
     }
 
-    public void setAtiva(boolean ativa) {
+    public void setAtiva(Boolean ativa) {
         this.ativa = ativa;
     }
 
@@ -21,7 +25,7 @@ public class Sala {
         return capacidade;
     }
 
-    public void setCapacidade(int capacidade) {
+    public void setCapacidade(Integer capacidade) {
         this.capacidade = capacidade;
     }
 
