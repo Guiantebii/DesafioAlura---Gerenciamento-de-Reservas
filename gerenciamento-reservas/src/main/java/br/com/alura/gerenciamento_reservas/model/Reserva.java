@@ -1,15 +1,27 @@
 package br.com.alura.gerenciamento_reservas.model;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "reservas")
 public class Reserva {
+    @Id
+    @GeneratedValue
     private Long id;
+    @ManyToOne
+    @JoinColumn(name = "sala_id", nullable = false)
     private Sala sala;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
     private StatusReserva status;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
 
+
+    public Reserva() {}
 
     public Reserva(
             Sala sala,
