@@ -1,4 +1,7 @@
 package br.com.alura.gerenciamento_reservas.repository;
 
-public class SalaRepository {
+import br.com.alura.gerenciamento_reservas.model.Sala;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SalaRepository  extends JpaRepository<Sala, Long> {
 }
