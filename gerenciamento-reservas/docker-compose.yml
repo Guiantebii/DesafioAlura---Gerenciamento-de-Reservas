@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-reservas
+    environment:
+      POSTGRES_DB: gerenciamento_reservas
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    restart: always
