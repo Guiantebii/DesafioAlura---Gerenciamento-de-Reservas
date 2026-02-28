@@ -16,6 +16,7 @@ public class Reserva {
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
+    @Enumerated(EnumType.STRING)
     private StatusReserva status;
     private LocalDateTime dataInicio;
     private LocalDateTime dataFim;
